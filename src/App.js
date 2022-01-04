@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import /*MaterializeCSS from*/ 'materialize-css/dist/css/materialize.min.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App">
+
+      <nav>
+        <div className="nav-wrapper">
+          <a href="#" className="brand-logo">React corso redux client</a>
+          <ul id="nav-mobile" className="right hide-on-med-and-down">
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <h1>Title in materialize CSS</h1>
     </div>
   );
 }
