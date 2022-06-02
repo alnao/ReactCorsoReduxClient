@@ -1,6 +1,13 @@
 import './App.css';
 import /*MaterializeCSS from*/ 'materialize-css/dist/css/materialize.min.css'
 import { Component } from 'react/cjs/react.production.min';
+import styled, { css } from 'styled-components'
+
+const Button = styled.button`
+  background: red;
+  border-radius: 3px;
+  ${props =>   props.primary &&   css`     background: palevioletred;  color: white;`};
+`
 
 function App() {
   return (
@@ -28,8 +35,8 @@ class Contatore extends Component {
   render(){
     return ( <div>
       <p>Contatore {this.state.count} </p>
-      <button onClick={() => this.addUno()}>AddUno</button>
-      <button onClick={() => this.set42()}>La vita, universo e tutto quanto</button>
+      <Button primary onClick={() => this.addUno()}>AddUno</Button>
+      <Button onClick={() => this.set42()}>La vita, universo e tutto quanto</Button>
       </div>)
   }
 }
